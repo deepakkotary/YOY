@@ -160,33 +160,40 @@
 /***************************************************************/
 /* MOBILE*/
 @media (max-width: 600px){
+
    body{
+  width: 100vw;
+    height: 100vh;
 padding: 0px;
 background-color: #FBFAF8;
+
 }
 
 
     .container{
         width: 100%;
-        min-height: 100vh;
-        min-height: 100dvh;
+        min-height: 100vh; 
         border-radius: 0px;
         /*sidebar moves above content*/
         grid-template-columns: 1fr;
+       
     }
     .sidebar{
+        width: 100vw;
         padding: 12px 15px;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         gap: 10px;
         height: auto;
+        background-color: green;
+        display: none;
     }
     .menu{
 flex-direction: row;
 gap: 12px;
 overflow-x: auto;
-
+background-color: red;
     }
     .menu a{
         text-decoration: none;
@@ -194,7 +201,9 @@ overflow-x: auto;
         white-space:nowrap;
     }
     .main{
-        padding: 22px 18px;
+        padding: 7px 7px auto 7px ;
+        
+       
     }
     /* reading columns become one column */
     .book-content{
@@ -217,15 +226,16 @@ overflow-x: auto;
 }
 
 /********  footer always at bottom   **********************/
-.main{
+/*.main{
     min-width: 0;
     min-height: 0;
     display: flex;
     flex-direction: column;
 }
-
+*/
 .pagination{
-margin-top: auto;
+margin-bottom: 0px;
+display: none;
 }
 
     </style>
