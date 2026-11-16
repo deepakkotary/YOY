@@ -6,32 +6,239 @@
 	<meta name="description" content="You Only You">
 	<title>You Only You</title>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500&family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
     *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-family: literata, sans-serif;
     }
     .header, .energy{
         margin: 0px 7px;
     }
     p{
         font-size: 12px;
-        font-weight: 700;
         text-align: justify;
        
     }
+    body{
+        background-color:#fffff9;
+    }
+/*******************************************************************************/
+/*main container */
+.container {
+    max-width: 1450px;
+    min-height: 85vh;
+    margin: auto;
+    background: #FBFAF8;
+    border-radius: 35px;
+    display: grid;
+
+    /* Sidebar + Main area */
+    grid-template-columns: 210px 1fr;
+
+    overflow: hidden;
+}
+
+/* sidebar*/
+
+.sidebar {
+    background: #F4F0E8;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+
+/* main content */
+
+.main {
+    min-width: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* book-header*/
+.book-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.book-header h2 {
+    font-size: 19px;
+}
+
+
+ /* three block layout: main area has two reading columns */
+
+.book-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.book-content p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    color: #444;
+    text-align: justify;
+}
+
+/* PAGE NAVIGATION */
+
+.pagination {
+    margin-top: auto;
+    padding: 20px;
+    background: #EEEEEC;
+    border-radius: 20px;
+
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+
+/*************************************************************************************/
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        grid-template-columns: 160px 1fr;
+    }
+
+    .main {
+        padding: 25px;
+    }
+
+    .book-content {
+        gap: 20px;
+    }
+
+}
+
+
+
+
+
+
+
+/***************************************************************/
+/* MOBILE*/
+@media (max-width: 600px){
+   body{
+padding: 0px;
+}
+
+
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0px;
+        /*sidebar moves above content*/
+        grid-template-columns: 1fr;
+    }
+    .sidebar{
+        padding: 12px 15px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        height: auto;
+    }
+    .menu{
+flex-direction: row;
+gap: 12px;
+overflow-x: auto;
+
+    }
+    .menu a{
+        text-decoration: none;
+        font-size: 12px;
+        white-space:nowrap;
+    }
+    .main{
+        padding: 22px 18px;
+    }
+    /* reading columns become one column */
+    .book-content{
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .book-content p{
+        font-size: 16px;
+        line-height: 1.85;
+    }
+    .book-header h2{
+        font-size: 15px;
+
+    }
+    .pagination{
+        margin-top: 30px;
+        padding: 12px;
+    }
+/***************************************************/
+}
     </style>
 </head>
 <body>
 <div class="container">
-<div class="header">
+    <!-- creating nav bar -->
+     <aside class="sidebar">
+        <div class="profile">
+            <nav class="menu">
+                <a href="#energy">ENERGY AND FREQUENCY</a>
+<a href="#absolute">ABSOLUTE WORLD</a>
+<a href="#relative">RELATIVE WORLD</a>
+<a href="#end">END OF RELATIVE WORLD</a>
+<a href="#validity">VALIDITY OF ABSOLUTE WORLD</a>
+<a href="#endenergy">AT THE END: ENERGY ONLY ENERGY</a>
+            </nav>
+        </div>
+
+     </aside>
+
+<main class="main">
+<!--now starting of main-->
+
+<div class="header book-header">
 <h2>You Only You</h2>
 </div>
 <!-- now comes to mid part -->
-<div class="mid">
+ <!--now comes to two reading columns-->
+ <section class="book-content">
+    <!--first column-->
+<div class="mid column">
    <div class="index">
-    <ul style="list-style-type: none; font-size: 12px; font-weight: 700; text-align: justify; margin: 7px 7px;">
+    <ul style="list-style-type: none; font-size: 12px; text-align: justify; margin: 7px 7px;">
         <li>Energy and Frequency</li>
             <li>Absolute World</li>
             <li>Relative World</li>
@@ -40,13 +247,28 @@
             <li>At the end: Energy Only Energy</li>
     </ul>
    </div>
-   <div class="energy">
+   <div class="energy" id="energy">
     <h3>Energy and Frequency</h3>
     <p>
         Everything, you see is made of energy. 
     </p>
    </div>
 </div>
+<!--second column-->
+<div class="mid column">
+    <div class="absolute" id="absolute">
+        <h3>Absolute World</h3>
+        <p>
+            The absolute world is the realm of pure energy and frequency.
+        </p>
+    </div>
+</div>
+</section>
+<!-- now times of footer -->
+<footer class="footer pagination">
+    <p>this is footer of YOY </p>
+</footer>
+</main>
 </div>
 </body>
 </html>
