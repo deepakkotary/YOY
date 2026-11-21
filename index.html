@@ -1,305 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="You Only You">
-	<title>You Only You</title>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500&family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
-
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: literata, sans-serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Only You</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    .header, .energy{
-        margin: 0px 7px;
-    }
-    p{
-        font-size: 12px;
-        text-align: justify;
-       
-    }
-    body{
-       background: #FBFAF8;
-        margin: 0px;
-        padding: 25px;
-        min-height: 100vh;
-        box-sizing: border-box;
-
-    }
-/*******************************************************************************/
-/*main container */
-.container {
-    width: 100%;
-    max-width: 1450px;
-    min-height: calc(100vh - 50px);
-    margin: auto;
-    background: #FBFAF8;
-    border-radius: 35px;
-    display: grid;
-
-    /* Sidebar + Main area */
-    grid-template-columns: 210px 1fr;
-
-    overflow: hidden;
-}
-
-/* sidebar*/
-
-.sidebar {
-    background: #FBF4EC;
-    padding: 30px 20px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #333;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-
-
-/* main content */
-
-.main {
-    min-width: 0;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* book-header*/
-.book-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.book-header h2 {
-    font-size: 19px;
-}
-
-
- /* three block layout: main area has two reading columns */
-
-.book-content {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 40px;
-}
-
-.book-content p {
-    font-size: 15px;
-    line-height: 1.9;
-    margin-bottom: 25px;
-    color: #444;
-    text-align: justify;
-}
-
-/* PAGE NAVIGATION */
-
-.pagination {
-    margin-top: auto;
-    padding: 20px;
-    background: #EEEEEC;
-    border-radius: 20px;
-
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-}
-
-
-/*************************************************************************************/
-
-/* TABLET */
-
-@media (max-width: 900px) {
 
     body {
-        padding: 0px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
     }
 
-    .container {
-        grid-template-columns: 160px 1fr;
+    header {
+      background: #2563eb;
+      color: white;
+      padding: 1rem;
+      text-align: center;
     }
 
-    .main {
-        padding: 25px;
+   footer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
     }
 
-    .book-content {
-        gap: 20px;
+    section {
+      margin-bottom: 2rem;
     }
 
-}
-
-
-
-
-
-
-
-/***************************************************************/
-/* MOBILE*/
-@media (max-width: 600px){
-
-   body{
-  width: 100vw;
-    height: 100vh;
-padding: 0px;
-background-color: #FBFAF8;
-
-}
-
-
-    .container{
-        width: 100%;
-        min-height: 100vh; 
-        border-radius: 0px;
-        /*sidebar moves above content*/
-        grid-template-columns: 1fr;
-       
+    @media (max-width: 600px) {
+      main {
+        padding: 1.5rem 1rem;
+      }
     }
-    .sidebar{
-        width: 100vw;
-        padding: 12px 15px;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        height: auto;
-        background-color: green;
-        display: none;
-    }
-    .menu{
-flex-direction: row;
-gap: 12px;
-overflow-x: auto;
-background-color: red;
-    }
-    .menu a{
-        text-decoration: none;
-        font-size: 12px;
-        white-space:nowrap;
-    }
-    .main{
-        padding: 7px 7px auto 7px ;
-        
-       
-    }
-    /* reading columns become one column */
-    .book-content{
-        grid-template-columns: 1fr;
-        gap: 0px;
-    }
-    .book-content p{
-        font-size: 16px;
-        line-height: 1.85;
-    }
-    .book-header h2{
-        font-size: 15px;
-
-    }
-    .pagination{
-        margin-top: 30px;
-        padding: 12px;
-    }
-/***************************************************/
-}
-
-/********  footer always at bottom   **********************/
-/*.main{
-    min-width: 0;
-    min-height: 0;
-    display: flex;
-    flex-direction: column;
-}
-*/
-.pagination{
-margin-bottom: 0px;
-display: none;
-}
-
-    </style>
+  </style>
 </head>
 <body>
-<div class="container">
-    <!-- creating nav bar -->
-     <aside class="sidebar">
-        <div class="profile">
-            <nav class="menu">
-                <a href="#energy">ENERGY AND FREQUENCY</a>
-<a href="#absolute">ABSOLUTE WORLD</a>
-<a href="#relative">RELATIVE WORLD</a>
-<a href="#end">END OF RELATIVE WORLD</a>
-<a href="#validity">VALIDITY OF ABSOLUTE WORLD</a>
-<a href="#endenergy">AT THE END: ENERGY ONLY ENERGY</a>
-            </nav>
-        </div>
+  <header>
+    <h1>You Only You</h1>
+  </header>
 
-     </aside>
+  <footer>
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>This is a basic and responsive HTML template.</p>
+    </section>
 
-<main class="main">
-<!--now starting of main-->
+    <section id="about">
+      <h2>About</h2>
+      <p>Add information about you or your website here.</p>
+    </section>
 
-<div class="header book-header">
-<h2>You Only You</h2>
-</div>
-<!-- now comes to mid part -->
- <!--now comes to two reading columns-->
- <section class="book-content">
-    <!--first column-->
-<div class="mid column">
-   <div class="index">
-    <ul style="list-style-type: none; font-size: 12px; text-align: justify; margin: 7px 7px;">
-        <li>Energy and Frequency</li>
-            <li>Absolute World</li>
-            <li>Relative World</li>
-            <li>End of Relative World</li>
-            <li>Validity of Absolute World</li>
-            <li>At the end: Energy Only Energy</li>
-    </ul>
-   </div>
-   <div class="energy" id="energy">
-    <h3>Energy and Frequency</h3>
-    <p>
-        Everything, you see is made of energy. 
-    </p>
-   </div>
-</div>
-<!--second column-->
-<div class="mid column">
-    <div class="absolute" id="absolute">
-        <h3>Absolute World</h3>
-        <p>
-            The absolute world is the realm of pure energy and frequency.
-        </p>
-    </div>
-</div>
-</section>
-<!-- now times of footer -->
-<footer class="footer pagination">
-    <p>this is footer of YOY </p>
-</footer>
-</main>
-</div>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: example@email.com</p>
+    </section>
+  </footer>
+
 </body>
 </html>
