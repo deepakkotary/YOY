@@ -28,6 +28,11 @@
 
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
    footer {
       max-width: 900px;
       margin: 0 auto;
@@ -39,10 +44,26 @@
     }
 
     @media (max-width: 600px) {
+/* styling to header*/
+header{
+  background-color: #fffdfd;
+ box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+/*styling to main*/
+ 
+main{
+  padding: 1rem;
+}
+p{
+  text-align: justify;
+}
+
       footer {
         padding: 1.5rem 1rem;
         background-color: #fffdfd;
         border-radius: 0px 0px 25px 25px ;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
       }
       .newChanges {
       
@@ -54,16 +75,36 @@
   </style>
 </head>
 <body>
+  <!-- header of this site-->
   <header>
-    <h2>You Only You</h2>
+    <h2>
+     <a href="/"> You Only You</a>
+    </h2>
   </header>
+  <!--main content of this site-->
+  <main>
+   <div class="intro">
+     <heading class="heading">
+      <h4>INTRO:</h4>
+    </heading>
+    <p>
+       Here we will discuss about <b>absolute world</b> and <b>relative world</b>.
+In relative world everything you see is made <b>for you and by you</b>. If you wake up in a morning with complete  memory 
+loss, then you will be supposed to born into a  new world. This means everything was made by you, when 
+you will die everything will be gone with you, nothing will be left here.
 
+And at the other side in Absolute world, nothing change with death of you.
+    </p>
+   </div>
+
+    </main>
+<!-- footer of this site-->
   <footer>
     <section id="changes">
  <div class="newChanges">
     <div class="slashes">//</div>
 <div class="date">November 21, 2026</div>
-<div class="myChange">starting our website</div>
+<div class="myChange">starting our journey</div>
    </div>
     </section>
   </footer>
