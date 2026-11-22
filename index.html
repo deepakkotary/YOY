@@ -46,6 +46,7 @@
 header{
   background-color: #fffdfd;
  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+ 
 }
 
 /*styling to main*/
@@ -55,6 +56,10 @@ main{
 }
 p{
   text-align: justify;
+  text-transform: capitalize;
+}
+h4{
+ font-weight: 900;
 }
 /* styling to menu */
 nav{
@@ -64,17 +69,18 @@ nav{
   border-radius: 5px ;
 box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 font-weight: 900;
+margin: 1rem 0px;
 }
 .red{
   color: red;
 
 }
 
-/* styling to main */
+/* styling to main ends here  */
       footer {
         padding: 1rem;
         background-color: #fffdfd;
-        border-radius: 0px 0px 25px 25px ;
+        border-radius: 25px 25px 0px 0px  ;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
       }
       .newChanges {
@@ -110,7 +116,7 @@ font-weight: bolder;
   <main>
    <div class="intro">
      <heading class="heading">
-      <h4>INTRO:</h4>
+      <h4>| INTRO </h4>
     </heading>
     <p>
        Here we will discuss about <b  >absolute world</b> and <b>relative world</b>.
@@ -124,28 +130,38 @@ And at the other side in Absolute world, nothing change with death of you.
 <!--end of intro-->
 <!--start of menu-->
 <nav class="menu" id="menu">
-  <a href="#energy">| ENERGY</a>
-  <a href="#absolute">| ABSOLUTE WORLD</a>
-  <a href="#relative">| RELATIVE WORLD</a>
-  <a href="#end">| END OF ABSOLUTE WORLD</a>
-<a href="#eoe">| ENERGY ONLY ENERGY</a>
+  <a href="#energy">ENERGY</a>
+  <a href="#absolute">ABSOLUTE WORLD</a>
+  <a href="#relative">RELATIVE WORLD</a>
+  <a href="#end">END OF ABSOLUTE WORLD</a>
+<a href="#eoe">ENERGY ONLY ENERGY</a>
 <br>
 <a href="#changes" style="margin: auto;">CHANGES IN OUR BOOK</a>
 </nav>
 <!-- end of menu -->
+
+<!-- energy container  -->
+ <div id="energy">
+  <h4>| ENERGY</h4>
+  <p>
+    Everything you see is made of only one thing, that is <b class="red"><a href="#eoe">energy only energy</a></b> nothing more. Some 
+energy is trapped and some is free. We can not generate energy, we can only convert one into 
+another and also we can not erase it from this universe.
+  </p>
+ </div>
     </main>
 <!-- footer of this site-->
   <footer>
     <section id="changes">
  <div class="newChanges">
-    <div class="slashes">||</div>
-<div class="date">November 21, 2026</div>
+    <!-- <div class="slashes">||</div> -->
+<div class="date">Nov. 21, 2026</div>
 <div class="myChange">Starting our journey and writing Intro of YOY.</div>
    </div>
    <div class="newChanges">
-    <div class="slashes">||</div>
-<div class="date">November 22, 2026</div>
-<div class="myChange">creating menu</div>
+    <!-- <div class="slashes">||</div> -->
+<div class="date">Nov. 22, 2026</div>
+<div class="myChange">creating menu and writing about<a href="#energy"> energy</a></div>
    </div>
     </section>
   </footer>
