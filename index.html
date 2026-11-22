@@ -21,11 +21,9 @@
     }
 
     header {
-     
       color: rgb(0, 0, 0);
-      padding: 1rem;
+     padding: 0px 0px 0px 1rem;
       text-align: justify;
-
     }
 
     a {
@@ -58,9 +56,23 @@ main{
 p{
   text-align: justify;
 }
+/* styling to menu */
+nav{
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-radius: 5px ;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+font-weight: 900;
+}
+.red{
+  color: red;
 
+}
+
+/* styling to main */
       footer {
-        padding: 1.5rem 1rem;
+        padding: 1rem;
         background-color: #fffdfd;
         border-radius: 0px 0px 25px 25px ;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
@@ -70,7 +82,20 @@ p{
        display: flex;
        flex-direction: row;
        gap: 15px;
+       margin: 1px;
       }
+      .date{
+        text-align: left;
+        min-width: max-content;
+      } 
+.myChange{
+text-align:left;
+}
+.slashes{
+font-weight: bolder;
+}
+
+      /*end of mobile media style */
     }
   </style>
 </head>
@@ -78,7 +103,7 @@ p{
   <!-- header of this site-->
   <header>
     <h2>
-     <a href="/"> You Only You</a>
+     <a href="#menu"> You Only You</a>
     </h2>
   </header>
   <!--main content of this site-->
@@ -88,23 +113,39 @@ p{
       <h4>INTRO:</h4>
     </heading>
     <p>
-       Here we will discuss about <b>absolute world</b> and <b>relative world</b>.
-In relative world everything you see is made <b>for you and by you</b>. If you wake up in a morning with complete  memory 
+       Here we will discuss about <b  >absolute world</b> and <b>relative world</b>.
+In relative world everything you see is made <b class="red">for you and by you</b>. If you wake up in a morning with complete  memory 
 loss, then you will be supposed to born into a  new world. This means everything was made by you, when 
 you will die everything will be gone with you, nothing will be left here.
 
 And at the other side in Absolute world, nothing change with death of you.
     </p>
    </div>
-
+<!--end of intro-->
+<!--start of menu-->
+<nav class="menu" id="menu">
+  <a href="#energy">| ENERGY</a>
+  <a href="#absolute">| ABSOLUTE WORLD</a>
+  <a href="#relative">| RELATIVE WORLD</a>
+  <a href="#end">| END OF ABSOLUTE WORLD</a>
+<a href="#eoe">| ENERGY ONLY ENERGY</a>
+<br>
+<a href="#changes" style="margin: auto;">CHANGES IN OUR BOOK</a>
+</nav>
+<!-- end of menu -->
     </main>
 <!-- footer of this site-->
   <footer>
     <section id="changes">
  <div class="newChanges">
-    <div class="slashes">//</div>
+    <div class="slashes">||</div>
 <div class="date">November 21, 2026</div>
-<div class="myChange">starting our journey</div>
+<div class="myChange">Starting our journey and writing Intro of YOY.</div>
+   </div>
+   <div class="newChanges">
+    <div class="slashes">||</div>
+<div class="date">November 22, 2026</div>
+<div class="myChange">creating menu</div>
    </div>
     </section>
   </footer>
