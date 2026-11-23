@@ -12,7 +12,14 @@
       margin: 0;
       padding: 0;
     }
+* {
+    -webkit-tap-highlight-color: transparent;
+}
 
+button, a, img {
+    user-select: none;
+    -webkit-user-select: none;
+}
     body {
         font-family: 'EB Garamond', serif;
       line-height: 1.6;
@@ -48,7 +55,20 @@ header{
  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
  
 }
-
+/* styling to menu */
+nav{
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px ;
+/* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; */
+text-align: right;
+border-right: .1px solid green;
+}
+nav a{
+  font-weight: 500;
+  font-size: 15px;
+}
+/* styling to menu ends here  */
 /*styling to main*/
  
 main{
@@ -61,21 +81,17 @@ p{
 h4{
  font-weight: 900;
 }
-/* styling to menu */
-nav{
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-  border-radius: 5px ;
-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-font-weight: 900;
-margin: 1rem 0px;
-}
+
 .red{
-  color: red;
+  color:green;
 
 }
-
+.paragraph{
+  margin: 1rem 0px;
+}
+.intro{
+  margin-top: 0px;
+}
 /* styling to main ends here  */
       footer {
         padding: 1rem;
@@ -114,7 +130,7 @@ font-weight: bolder;
   </header>
   <!--main content of this site-->
   <main>
-   <div class="intro">
+   <div class="intro paragraph">
      <heading class="heading">
       <h4>| INTRO </h4>
     </heading>
@@ -135,13 +151,12 @@ And at the other side in Absolute world, nothing change with death of you.
   <a href="#relative">RELATIVE WORLD</a>
   <a href="#end">END OF ABSOLUTE WORLD</a>
 <a href="#eoe">ENERGY ONLY ENERGY</a>
-<br>
-<a href="#changes" style="margin: auto;">CHANGES IN OUR BOOK</a>
+<a href="#changes" style="text-decoration: overline;">CHANGES IN OUR BOOK</a>
 </nav>
 <!-- end of menu -->
 
 <!-- energy container  -->
- <div id="energy">
+ <div class="paragraph" id="energy">
   <h4>| ENERGY</h4>
   <p>
     Everything you see is made of only one thing, that is <b class="red"><a href="#eoe">energy only energy</a></b> nothing more. Some 
@@ -149,22 +164,39 @@ energy is trapped and some is free. We can not generate energy, we can only conv
 another and also we can not erase it from this universe.
   </p>
  </div>
+ <!-- absolute world  -->
+  <div class="paragraph" id="absolute">
+    <h4>| ABSOLUTE WORLD</h4>
+    <P>
+The world where you are only a butterfly, not too more. Everything is already written in your fate 
+you are just medium to fullfill the plan of nature. 
+    </P>
+  </div>
     </main>
+    <!-- our videos section -->
+    
 <!-- footer of this site-->
   <footer>
     <section id="changes">
- <div class="newChanges">
-    <!-- <div class="slashes">||</div> -->
-<div class="date">Nov. 21, 2026</div>
-<div class="myChange">Starting our journey and writing Intro of YOY.</div>
+       <div class="newChanges">
+   
+<div class="date">Nov. 23, 2026</div>
+<div class="myChange">writing about absolute world.</div>
    </div>
-   <div class="newChanges">
-    <!-- <div class="slashes">||</div> -->
+     <div class="newChanges">
+   
 <div class="date">Nov. 22, 2026</div>
 <div class="myChange">creating menu and writing about<a href="#energy"> energy</a></div>
    </div>
+ <div class="newChanges">
+   
+<div class="date">Nov. 21, 2026</div>
+<div class="myChange">Starting our journey and writing Intro of YOY.</div>
+   </div>
+  
     </section>
   </footer>
-
+<!-- coding our script  -->
+ 
 </body>
 </html>
