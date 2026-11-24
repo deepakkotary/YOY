@@ -49,6 +49,15 @@ button, a, img {
     }
 
     @media (max-width: 600px) {
+   html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-color: green green;
+    
+}
+html::-webkit-scrollbar{
+  display: none;
+}
 /* styling to header*/
 header{
   background-color: #fffdfd;
@@ -59,14 +68,16 @@ header{
 nav{
   display: flex;
   flex-direction: column;
-  padding-right: 5px ;
+  padding: 1rem ;
+  padding-bottom: 0px;
 /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; */
-text-align: right;
-border-right: .1px solid green;
+text-align: justify;
+border-top: .1px solid green;
+text-transform: capitalize;
 }
 nav a{
   font-weight: 500;
-  font-size: 15px;
+  font-size: large;
 }
 /* styling to menu ends here  */
 /*styling to main*/
@@ -128,6 +139,16 @@ font-weight: bolder;
      <a href="#menu"> You Only You</a>
     </h2>
   </header>
+  <!--start of menu-->
+<nav class="menu" id="menu">
+  <a href="#energy">energy</a>
+  <a href="#absolute">absolute world</a>
+  <a href="#relative">relative world</a>
+  <a href="#end">end of absolute world</a>
+<a href="#eoe">energy only energy</a>
+<a href="#changes" style="text-decoration: overline;">changes in YOY</a>
+</nav>
+<!-- end of menu -->
   <!--main content of this site-->
   <main>
    <div class="intro paragraph">
@@ -144,16 +165,7 @@ And at the other side in Absolute world, nothing change with death of you.
     </p>
    </div>
 <!--end of intro-->
-<!--start of menu-->
-<nav class="menu" id="menu">
-  <a href="#energy">ENERGY</a>
-  <a href="#absolute">ABSOLUTE WORLD</a>
-  <a href="#relative">RELATIVE WORLD</a>
-  <a href="#end">END OF ABSOLUTE WORLD</a>
-<a href="#eoe">ENERGY ONLY ENERGY</a>
-<a href="#changes" style="text-decoration: overline;">CHANGES IN OUR BOOK</a>
-</nav>
-<!-- end of menu -->
+
 
 <!-- energy container  -->
  <div class="paragraph" id="energy">
