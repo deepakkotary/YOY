@@ -4,133 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>You Only You</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500&family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-* {
-    -webkit-tap-highlight-color: transparent;
-}
-
-button, a, img {
-    user-select: none;
-    -webkit-user-select: none;
-}
-    body {
-        font-family: 'EB Garamond', serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #FBFAF8;
-    }
-
-    header {
-      color: rgb(0, 0, 0);
-     padding: 0px 0px 0px 1rem;
-      text-align: justify;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-   footer {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    @media (max-width: 600px) {
-   html {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    scrollbar-color: green green;
-    
-}
-html::-webkit-scrollbar{
-  display: none;
-}
-/* styling to header*/
-header{
-  background-color: #fffdfd;
- box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
- 
-}
-/* styling to menu */
-nav{
-  display: flex;
-  flex-direction: column;
-  padding: 1rem ;
-  padding-bottom: 0px;
-/* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; */
-text-align: justify;
-border-top: .1px solid green;
-text-transform: capitalize;
-}
-nav a{
-  font-weight: 500;
-  font-size: large;
-}
-/* styling to menu ends here  */
-/*styling to main*/
- 
-main{
-  padding: 1rem;
-}
-p{
-  text-align: justify;
-  text-transform: capitalize;
-}
-h4{
- font-weight: 900;
-}
-
-.red{
-  color:green;
-
-}
-.paragraph{
-  margin: 1rem 0px;
-}
-.intro{
-  margin-top: 0px;
-}
-/* styling to main ends here  */
-      footer {
-        padding: 1rem;
-        background-color: #fffdfd;
-        border-radius: 25px 25px 0px 0px  ;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-      }
-      .newChanges {
-      
-       display: flex;
-       flex-direction: row;
-       gap: 15px;
-       margin: 1px;
-      }
-      .date{
-        text-align: left;
-        min-width: max-content;
-      } 
-.myChange{
-text-align:left;
-}
-.slashes{
-font-weight: bolder;
-}
-
-      /*end of mobile media style */
-    }
-  </style>
+  <link rel="stylesheet" href="./css style/index.css">
 </head>
 <body>
   <!-- header of this site-->
@@ -139,16 +13,6 @@ font-weight: bolder;
      <a href="#menu"> You Only You</a>
     </h2>
   </header>
-  <!--start of menu-->
-<nav class="menu" id="menu">
-  <a href="#energy">energy</a>
-  <a href="#absolute">absolute world</a>
-  <a href="#relative">relative world</a>
-  <a href="#end">end of absolute world</a>
-<a href="#eoe">energy only energy</a>
-<a href="#changes" style="text-decoration: overline;">changes in YOY</a>
-</nav>
-<!-- end of menu -->
   <!--main content of this site-->
   <main>
    <div class="intro paragraph">
@@ -189,24 +53,15 @@ you are just medium to fullfill the plan of nature.
     
 <!-- footer of this site-->
   <footer>
-    <section id="changes">
-       <div class="newChanges">
-   
-<div class="date">Nov. 23, 2026</div>
-<div class="myChange">writing about absolute world.</div>
-   </div>
-     <div class="newChanges">
-   
-<div class="date">Nov. 22, 2026</div>
-<div class="myChange">creating menu and writing about<a href="#energy"> energy</a></div>
-   </div>
- <div class="newChanges">
-   
-<div class="date">Nov. 21, 2026</div>
-<div class="myChange">Starting our journey and writing Intro of YOY.</div>
-   </div>
-  
-    </section>
+    <!-- our core topics -->
+<div class="coreTopics">
+  <ul>
+    <li><a href="#energy">Energy</a></li>
+    <li><a href="#absolute">Absolute world</a></li>
+  </ul>
+</div>
+
+    <!-- end of footer -->
   </footer>
 <!-- coding our script  -->
  
